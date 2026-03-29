@@ -6,7 +6,16 @@ A high-performance cryptocurrency dashboard built with Next.js, React, and TypeS
 
 ---
 
+## Preview
+
+![Crypto Dashboard](./src/screenshots/dashboard.png)
+
+---
+
 ## Lighthouse Scores
+
+![Lighthouse Scores](./src/screenshots/lighthouse.png)
+
 
 | Performance | Accessibility | Best Practices | SEO |
 |-------------|---------------|----------------|-----|
@@ -39,7 +48,7 @@ A high-performance cryptocurrency dashboard built with Next.js, React, and TypeS
 ## Getting Started
 ```bash
 # Clone the repository
-git clone https://github.com/YOURUSERNAME/crypto-dashboard.git
+git clone https://github.com/GabrielZacarias/crypto-dashboard.git
 
 # Install dependencies
 cd crypto-dashboard
@@ -55,7 +64,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Architecture
 
-- **App Router** — Next.js 15 file based routing with server and client components
+- **App Router** — Next.js 16 file based routing with server and client components
 - **Custom Hook** — `useCrypto` handles data fetching and state management
 - **Server Side Caching** — Data revalidates every 12 hours reducing unnecessary API calls
 - **Component Structure** — Modular components with CSS Modules for scoped styling
