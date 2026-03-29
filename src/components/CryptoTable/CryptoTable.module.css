@@ -1,0 +1,58 @@
+.cryptoTable {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #1a202c;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg, 
+    #f0f0f0 25%, 
+    #e0e0e0 50%, 
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: red;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+}
+
+.positiveBadge {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.negativeBadge {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}
