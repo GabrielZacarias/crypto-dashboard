@@ -21,27 +21,27 @@ const formatPrice = (price: number): string => {
 }
 
 /**
- * Formats a number as a market capitalization string in USD.
- * @param marketCap The market capitalization to format.
- * @returns The formatted market capitalization string in USD.
+ * Formats large numbers for market cap and volume.
+ * @param data The data to format.
+ * @returns The formatted data capitalization string.
  */
-const formatMarketCap = (marketCap: number): string => {
+const formatCap = (data: number, symbol: string = ''): string => {
   const TRILLION = 1_000_000_000_000;
   const BILLION = 1_000_000_000;
   const MILLION = 1_000_000;
   const THOUSAND = 1_000;
 
   switch (true) {
-    case marketCap >= TRILLION:
-      return `$${(marketCap / TRILLION).toFixed(2)}T`;
-    case marketCap >= BILLION:
-      return `$${(marketCap / BILLION).toFixed(2)}B`;
-    case marketCap >= MILLION:
-      return `$${(marketCap / MILLION).toFixed(2)}M`;
-    case marketCap >= THOUSAND:
-      return `$${(marketCap / THOUSAND).toFixed(2)}K`;
+    case data >= TRILLION:
+      return `${symbol}${(data / TRILLION).toFixed(2)}T`;
+    case data >= BILLION:
+      return `${symbol}${(data / BILLION).toFixed(2)}B`;
+    case data >= MILLION:
+      return `${symbol}${(data / MILLION).toFixed(2)}M`;
+    case data >= THOUSAND:
+      return `${symbol}${(data / THOUSAND).toFixed(2)}K`;
     default:
-      return `$${marketCap.toString()}`;
+      return `${symbol}${data.toString()}`;
   }
 }
 
@@ -70,11 +70,11 @@ export const CryptoCard = ({ coin }: CryptoCardProps) => {
       </div>
 
       <div className={styles.marketInfo}>
-        <p className={styles.value}>{formatMarketCap(coin.market_cap)}</p>
+        <p className={styles.value}>{formatCap(coin.market_cap, '$')}</p>
       </div>
 
       <div className={styles.volumeInfo}>
-        <p className={styles.volume}>{coin.total_volume}</p>
+        <p className={styles.volume}>{formatCap(coin.total_volume)}</p>
       </div>
     </div>
   )

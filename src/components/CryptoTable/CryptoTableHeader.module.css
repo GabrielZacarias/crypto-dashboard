@@ -22,3 +22,13 @@
   text-align: left;
   width: 200px;
 }
+
+@media screen and (max-width: 768px) {
+  .col {
+    width: 100px;
+  }
+
+  .col:first-child {
+    width: 150px;
+  }
+}

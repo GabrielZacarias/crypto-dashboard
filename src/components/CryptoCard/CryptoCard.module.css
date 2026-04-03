@@ -98,3 +98,33 @@
 .negative {
   background-color: #fed7d7;
 }
+
+@media screen and (max-width: 768px) {
+  .coinInfo {
+    width: 150px;
+  }
+
+  .coinInfo img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .marketInfo,
+  .changeInfo,
+  .volumeInfo,
+  .priceInfo {
+    width: 100px;
+  }
+
+  .price,
+  .badge,
+  .value,
+  .volumeInfo,
+  .name {
+    font-size: 12px;
+  }
+
+  .symbol {
+    font-size: 10px;
+  }
+}
