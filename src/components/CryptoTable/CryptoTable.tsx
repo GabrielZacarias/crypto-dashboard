@@ -44,6 +44,10 @@ export const CryptoTable = () => {
         aVal = a.market_cap;
         bVal = b.market_cap;
         break;
+      case 'volume':
+        aVal = a.total_volume;
+        bVal = b.total_volume;
+        break;
       default:
         return 0;
     }
