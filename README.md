@@ -27,6 +27,8 @@ A high-performance cryptocurrency dashboard built with Next.js, React, and TypeS
 
 - Live cryptocurrency prices fetched from CoinGecko API
 - Top 10 coins ranked by market cap
+- Sortable columns - click any header to sort by name, price, 24h change, market cap, or volume
+- Toggle ascending and descending order with visual arrow indicators
 - Color coded 24h price change badges with directional arrows
 - Market cap formatted in T, B, and M for readability
 - 12 hour server side data caching via Next.js revalidate
